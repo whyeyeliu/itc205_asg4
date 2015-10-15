@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -21,7 +20,7 @@ public class Game {
 		for (Dice d : dice) {
 			values.add(d.getValue());
 		}
-		return Collections.unmodifiableList(values);
+		return values;
 	}	
 	
 	public int playRound(Player player, DiceValue pick, int bet ) {		

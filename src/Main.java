@@ -23,7 +23,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
             	int balance = 100;
@@ -37,8 +37,7 @@ public class Main {
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-                for (int j = 0; j < 10000; j++)
-                //while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
+                while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
@@ -51,6 +50,7 @@ public class Main {
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
+                    System.out.println("Size of cdv: " + cdv.size());
                     
                     if (winnings > 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
